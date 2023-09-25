@@ -1,26 +1,19 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
- * print_diagsums - function that prints the sum of the two diagonals
+ * print_chessboard - function that prints the chessboard.
  *@a: first value -char
- *@size: second value -int
+ *
  */
-void print_diagsums(int *a, int size)
+void print_chessboard(char (*a)[8])
 {
-	int i, j, suma_1 = 0, suma_2 = 0, k, l = 0;
+	int i, j;
 
-	k = size - 1;
-	for (i = 0; i < size; i++)
+	for (i = 0; i < 8; i++)
 	{
-		for (j = 0; j < size; j++)
+		for (j = 0; j < 8; j++)
 		{
-			if (i == j)
-				suma_1 += a[l];
-			if (j == k)
-				suma_2 += a[l];
-			l++;
+			_putchar (a[i][j]);
 		}
-		k--;
+		_putchar('\n');
 	}
-	printf("%i, %i\n", suma_1, suma_2);
 }
